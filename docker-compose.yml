@@ -1,0 +1,28 @@
+# docker-compose.yml
+services:
+  # The Message Broker
+  redis:
+    image: redis:alpine
+    restart: always
+
+  # The Listener
+  sentinel:
+    build: .
+    command: python -m src.sentinel
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+    env_file: .env
+    restart: always
+
+  # The Worker (Scale this up if needed!)
+  analyzer:
+    build: .
+    command: python -m src.analyzer
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+    env_file: .env
+    restart: always
