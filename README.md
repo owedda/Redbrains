@@ -1,1 +1,1 @@
-Big brains for big project
+The application allows domain experts and product support teams to discover relevant questions across Reddit where users are actively seeking help or specific solutions. The benefit to Redditors is faster, more accurate assistance. Instead of questions going unanswered or receiving poor advice, this tool helps connect users who have specific problems with the experts or representatives who can actually solve them, ensuring high-quality, relevant information reaches the community in a timely manner
